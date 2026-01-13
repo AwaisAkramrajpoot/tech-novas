@@ -1,41 +1,42 @@
 "use client"
 
-import { Navbar } from "@/components/navbar"
-import { Footer } from "@/components/footer"
-import { ArrowRight, TrendingUp, BarChart3, Zap, Target } from "lucide-react"
+import { Navbar } from "../../../components/navbar"
+import { Footer } from "../../../components/footer"
+import { ArrowRight, Zap, Brain, TrendingUp, Lightbulb, BarChart3, Shield } from "lucide-react"
 import Link from "next/link"
 
-export default function SEOSolutions() {
+export default function AIPoweredSolutions() {
   return (
     <>
       <Navbar />
       <main className="pt-24 pb-16">
+        {/* Hero Section */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 animate-fade-in-up">
           <div className="mb-12">
             <h1 className="text-5xl md:text-6xl font-bold text-navy mb-4">
-              SEO <span className="text-cyan-600">Solutions</span>
+              AI-Powered <span className="text-cyan-600">Solutions</span>
             </h1>
             <p className="text-xl text-gray-600 mb-4">
-              Rank higher on search engines and drive organic traffic to your website
+              Transform your business with cutting-edge artificial intelligence technologies
             </p>
             <div className="w-24 h-1 bg-gradient-to-r from-cyan-600 to-blue-900 rounded-full"></div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-slide-in-left">
-              <h2 className="text-3xl font-bold text-navy mb-6">Boost Your Online Visibility</h2>
+              <h2 className="text-3xl font-bold text-navy mb-6">What We Offer</h2>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                Our SEO experts use proven strategies to improve your search engine rankings, increase organic traffic,
-                and drive qualified leads to your business.
+                Our AI-powered solutions leverage the latest machine learning and deep learning technologies to automate
+                processes, enhance decision-making, and unlock new opportunities for your business.
               </p>
               <ul className="space-y-3 mb-8">
                 {[
-                  "Keyword Research & Strategy",
-                  "On-Page Optimization",
-                  "Technical SEO",
-                  "Link Building",
-                  "Content Optimization",
-                  "Local SEO",
+                  "Machine Learning Models",
+                  "Natural Language Processing",
+                  "Computer Vision Solutions",
+                  "Predictive Analytics",
+                  "Chatbots & Virtual Assistants",
+                  "Data-Driven Insights",
                 ].map((item, i) => (
                   <li
                     key={i}
@@ -51,16 +52,16 @@ export default function SEOSolutions() {
                 href="/contact"
                 className="inline-block px-8 py-3 bg-blue-900 text-white rounded-full font-semibold hover:bg-cyan-600 transition-all duration-300 hover:shadow-lg"
               >
-                Improve Rankings
+                Get Consultation
               </Link>
             </div>
 
             <div className="grid grid-cols-2 gap-4 animate-slide-in-right">
               {[
-                { icon: TrendingUp, title: "Organic Growth", desc: "Sustainable Traffic" },
-                { icon: BarChart3, title: "Analytics", desc: "Track Progress" },
-                { icon: Target, title: "Targeted", desc: "Right Audience" },
-                { icon: Zap, title: "Fast Results", desc: "Quick Improvements" },
+                { icon: Brain, title: "Smart AI", desc: "Intelligent Algorithms" },
+                { icon: Zap, title: "Fast & Efficient", desc: "Real-time Processing" },
+                { icon: TrendingUp, title: "Growth", desc: "Scalable Solutions" },
+                { icon: Shield, title: "Secure", desc: "Enterprise Grade" },
               ].map((item, i) => (
                 <div
                   key={i}
@@ -76,40 +77,55 @@ export default function SEOSolutions() {
           </div>
         </section>
 
+        {/* Key Features */}
         <section className="bg-gray-50 py-20 mt-20 animate-fade-in-up">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl font-bold text-navy mb-2 text-center">Our SEO Services</h2>
+            <h2 className="text-4xl font-bold text-navy mb-2 text-center">Key Features</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-cyan-600 to-blue-900 rounded-full mx-auto mb-12"></div>
 
             <div className="grid md:grid-cols-3 gap-8">
               {[
-                { title: "Technical SEO", desc: "Site structure, speed, and crawlability optimization" },
-                { title: "Content Strategy", desc: "Keyword-rich content creation and optimization" },
-                { title: "Link Building", desc: "Quality backlink acquisition and authority building" },
-              ].map((service, i) => (
+                {
+                  icon: Brain,
+                  title: "Advanced ML Models",
+                  desc: "State-of-the-art machine learning models trained on your specific data",
+                },
+                {
+                  icon: BarChart3,
+                  title: "Analytics & Insights",
+                  desc: "Transform raw data into actionable business intelligence",
+                },
+                {
+                  icon: Lightbulb,
+                  title: "Custom Solutions",
+                  desc: "Tailored AI solutions designed for your unique business needs",
+                },
+              ].map((feature, i) => (
                 <div
                   key={i}
                   className="p-8 bg-white rounded-lg border border-gray-200 hover-lift animate-fade-in-up"
                   style={{ animationDelay: `${i * 0.15}s` }}
                 >
-                  <h3 className="text-xl font-bold text-navy mb-3">{service.title}</h3>
-                  <p className="text-gray-600">{service.desc}</p>
+                  <feature.icon className="w-12 h-12 text-cyan-600 mb-4" />
+                  <h3 className="text-xl font-bold text-navy mb-3">{feature.title}</h3>
+                  <p className="text-gray-600">{feature.desc}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
+        {/* CTA Section */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center animate-fade-in-up">
-          <h2 className="text-4xl font-bold text-navy mb-6">Ready to Dominate Search Results?</h2>
+          <h2 className="text-4xl font-bold text-navy mb-6">Ready to Implement AI Solutions?</h2>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Let our SEO experts create a comprehensive strategy to boost your online presence
+            Let our AI experts help you unlock the full potential of artificial intelligence for your business
           </p>
           <Link
             href="/contact"
             className="inline-flex items-center gap-2 px-8 py-4 bg-blue-900 text-white rounded-full font-semibold hover:bg-cyan-600 transition-all duration-300 hover:shadow-lg"
           >
-            Get Free SEO Audit
+            Start Your AI Journey
             <ArrowRight size={20} />
           </Link>
         </section>

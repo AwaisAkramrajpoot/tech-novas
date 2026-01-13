@@ -1,42 +1,41 @@
 "use client"
 
-import { Navbar } from "@/components/navbar"
-import { Footer } from "@/components/footer"
-import { ArrowRight, Database, Zap, Lock, Settings } from "lucide-react"
+import { Navbar } from "../../../components/navbar"
+import { Footer } from "../../../components/footer"
+import { ArrowRight, Wrench, BarChart3, Shield, Clock } from "lucide-react"
 import Link from "next/link"
 
-export default function CMSSolutions() {
+export default function MaintenanceSupport() {
   return (
     <>
       <Navbar />
       <main className="pt-24 pb-16">
-        {/* Hero Section */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 animate-fade-in-up">
           <div className="mb-12">
             <h1 className="text-5xl md:text-6xl font-bold text-navy mb-4">
-              CMS Based <span className="text-cyan-600">Solutions</span>
+              Application Maintenance <span className="text-cyan-600">& Support</span>
             </h1>
             <p className="text-xl text-gray-600 mb-4">
-              Manage your content easily with powerful, flexible CMS platforms
+              Keep your applications running smoothly with professional support
             </p>
             <div className="w-24 h-1 bg-gradient-to-r from-cyan-600 to-blue-900 rounded-full"></div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-slide-in-left">
-              <h2 className="text-3xl font-bold text-navy mb-6">Content Management Excellence</h2>
+              <h2 className="text-3xl font-bold text-navy mb-6">Reliable Support & Maintenance</h2>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                We build custom CMS solutions using WordPress, Webflow, Contentful, and other platforms tailored to your
-                specific content needs.
+                We provide comprehensive maintenance and support services to ensure your applications remain secure,
+                performant, and up-to-date with the latest technologies and best practices.
               </p>
               <ul className="space-y-3 mb-8">
                 {[
-                  "WordPress Customization",
-                  "Headless CMS Solutions",
-                  "Easy Content Updates",
-                  "Multi-user Permissions",
-                  "SEO-Friendly",
-                  "Content Scheduling",
+                  "24/7 Support & Monitoring",
+                  "Bug Fixes & Patches",
+                  "Performance Optimization",
+                  "Security Updates",
+                  "Backup & Recovery",
+                  "Technical Documentation",
                 ].map((item, i) => (
                   <li
                     key={i}
@@ -52,16 +51,16 @@ export default function CMSSolutions() {
                 href="/contact"
                 className="inline-block px-8 py-3 bg-blue-900 text-white rounded-full font-semibold hover:bg-cyan-600 transition-all duration-300 hover:shadow-lg"
               >
-                Setup Your CMS
+                Get Support Plan
               </Link>
             </div>
 
             <div className="grid grid-cols-2 gap-4 animate-slide-in-right">
               {[
-                { icon: Database, title: "Scalable", desc: "Grow Your Content" },
-                { icon: Zap, title: "Fast", desc: "Quick Publishing" },
-                { icon: Lock, title: "Secure", desc: "Protected Data" },
-                { icon: Settings, title: "Customizable", desc: "Your Way" },
+                { icon: Clock, title: "24/7 Monitoring", desc: "Always Available" },
+                { icon: Shield, title: "Security", desc: "Protected Systems" },
+                { icon: Wrench, title: "Maintenance", desc: "Regular Updates" },
+                { icon: BarChart3, title: "Performance", desc: "Optimized Speed" },
               ].map((item, i) => (
                 <div
                   key={i}
@@ -77,39 +76,55 @@ export default function CMSSolutions() {
           </div>
         </section>
 
-        {/* Platforms We Support */}
         <section className="bg-gray-50 py-20 mt-20 animate-fade-in-up">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl font-bold text-navy mb-2 text-center">Platforms We Support</h2>
+            <h2 className="text-4xl font-bold text-navy mb-2 text-center">Support Plans</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-cyan-600 to-blue-900 rounded-full mx-auto mb-12"></div>
 
-            <div className="grid md:grid-cols-4 gap-6">
-              {["WordPress", "Webflow", "Contentful", "Strapi", "Sanity", "Ghost", "Statamic", "Craft"].map(
-                (platform, i) => (
-                  <div
-                    key={i}
-                    className="p-6 bg-white rounded-lg border border-gray-200 text-center hover-lift animate-fade-in-up"
-                    style={{ animationDelay: `${i * 0.1}s` }}
-                  >
-                    <p className="font-semibold text-navy">{platform}</p>
-                  </div>
-                ),
-              )}
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                { name: "Basic", price: "$500/mo", features: ["Email Support", "Monthly Updates", "Basic Monitoring"] },
+                {
+                  name: "Professional",
+                  price: "$1500/mo",
+                  features: ["24/7 Phone Support", "Weekly Updates", "Advanced Monitoring"],
+                },
+                {
+                  name: "Enterprise",
+                  price: "Custom",
+                  features: ["Dedicated Support", "Daily Updates", "Full-Stack Monitoring"],
+                },
+              ].map((plan, i) => (
+                <div
+                  key={i}
+                  className="p-8 bg-white rounded-lg border border-gray-200 hover-lift animate-fade-in-up"
+                  style={{ animationDelay: `${i * 0.15}s` }}
+                >
+                  <h3 className="text-2xl font-bold text-navy mb-2">{plan.name}</h3>
+                  <p className="text-3xl font-bold text-cyan-600 mb-6">{plan.price}</p>
+                  <ul className="space-y-2">
+                    {plan.features.map((feature, j) => (
+                      <li key={j} className="text-gray-600">
+                        ✓ {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center animate-fade-in-up">
-          <h2 className="text-4xl font-bold text-navy mb-6">Ready to Implement a CMS?</h2>
+          <h2 className="text-4xl font-bold text-navy mb-6">Let Us Handle Your Maintenance</h2>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Get a powerful content management system that grows with your business
+            Focus on your business while we keep your applications secure and performing at their best
           </p>
           <Link
             href="/contact"
             className="inline-flex items-center gap-2 px-8 py-4 bg-blue-900 text-white rounded-full font-semibold hover:bg-cyan-600 transition-all duration-300 hover:shadow-lg"
           >
-            Get Started Today
+            Choose Your Plan
             <ArrowRight size={20} />
           </Link>
         </section>

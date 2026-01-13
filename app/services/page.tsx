@@ -1,5 +1,5 @@
-import { Navbar } from "@/components/navbar"
-import { Footer } from "@/components/footer"
+import { Navbar } from "../../components/navbar"
+import { Footer } from "../../components/footer"
 import { Code2, Smartphone, Palette, Zap, GitBranch, Layers } from "lucide-react"
 
 const allServices = [

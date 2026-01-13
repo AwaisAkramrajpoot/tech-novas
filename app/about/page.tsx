@@ -1,7 +1,7 @@
 "use client"
 
-import { Navbar } from "@/components/navbar"
-import { Footer } from "@/components/footer"
+import { Navbar } from "../../components/navbar"
+import { Footer } from "../../components/footer"
 import { ChevronDown, Star, ShoppingCart, Activity, BookOpen, DollarSign, Building2 } from "lucide-react"
 import { useState } from "react"
 

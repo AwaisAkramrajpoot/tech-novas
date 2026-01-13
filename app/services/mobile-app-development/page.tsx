@@ -1,7 +1,7 @@
 "use client"
 
-import { Navbar } from "@/components/navbar"
-import { Footer } from "@/components/footer"
+import { Navbar } from "../../../components/navbar"
+import { Footer } from "../../../components/footer"
 import { ArrowRight, Smartphone, Zap, Globe, Lock } from "lucide-react"
 import Link from "next/link"
 

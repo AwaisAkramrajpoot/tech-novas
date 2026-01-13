@@ -1,41 +1,42 @@
 "use client"
 
-import { Navbar } from "@/components/navbar"
-import { Footer } from "@/components/footer"
-import { ArrowRight, MessageSquare, Users, TrendingUp, Share2 } from "lucide-react"
+import { Navbar } from "../../../components/navbar"
+import { Footer } from "../../../components/footer"
+import { ArrowRight, Database, Zap, Lock, Settings } from "lucide-react"
 import Link from "next/link"
 
-export default function SocialMediaMarketing() {
+export default function CMSSolutions() {
   return (
     <>
       <Navbar />
       <main className="pt-24 pb-16">
+        {/* Hero Section */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 animate-fade-in-up">
           <div className="mb-12">
             <h1 className="text-5xl md:text-6xl font-bold text-navy mb-4">
-              Social Media <span className="text-cyan-600">Marketing</span>
+              CMS Based <span className="text-cyan-600">Solutions</span>
             </h1>
             <p className="text-xl text-gray-600 mb-4">
-              Engage, grow, and convert your audience across all social platforms
+              Manage your content easily with powerful, flexible CMS platforms
             </p>
             <div className="w-24 h-1 bg-gradient-to-r from-cyan-600 to-blue-900 rounded-full"></div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-slide-in-left">
-              <h2 className="text-3xl font-bold text-navy mb-6">Build Your Social Presence</h2>
+              <h2 className="text-3xl font-bold text-navy mb-6">Content Management Excellence</h2>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                We create compelling social media strategies that engage your audience, build brand loyalty, and drive
-                conversions across Facebook, Instagram, LinkedIn, TikTok, and more.
+                We build custom CMS solutions using WordPress, Webflow, Contentful, and other platforms tailored to your
+                specific content needs.
               </p>
               <ul className="space-y-3 mb-8">
                 {[
-                  "Social Media Strategy",
-                  "Content Creation",
-                  "Community Management",
-                  "Paid Advertising",
-                  "Influencer Partnerships",
-                  "Performance Analytics",
+                  "WordPress Customization",
+                  "Headless CMS Solutions",
+                  "Easy Content Updates",
+                  "Multi-user Permissions",
+                  "SEO-Friendly",
+                  "Content Scheduling",
                 ].map((item, i) => (
                   <li
                     key={i}
@@ -51,16 +52,16 @@ export default function SocialMediaMarketing() {
                 href="/contact"
                 className="inline-block px-8 py-3 bg-blue-900 text-white rounded-full font-semibold hover:bg-cyan-600 transition-all duration-300 hover:shadow-lg"
               >
-                Build Your Strategy
+                Setup Your CMS
               </Link>
             </div>
 
             <div className="grid grid-cols-2 gap-4 animate-slide-in-right">
               {[
-                { icon: Users, title: "Audience Growth", desc: "Real Followers" },
-                { icon: MessageSquare, title: "Engagement", desc: "Active Community" },
-                { icon: TrendingUp, title: "Growth", desc: "Consistent Progress" },
-                { icon: Share2, title: "Viral Potential", desc: "Shareable Content" },
+                { icon: Database, title: "Scalable", desc: "Grow Your Content" },
+                { icon: Zap, title: "Fast", desc: "Quick Publishing" },
+                { icon: Lock, title: "Secure", desc: "Protected Data" },
+                { icon: Settings, title: "Customizable", desc: "Your Way" },
               ].map((item, i) => (
                 <div
                   key={i}
@@ -76,35 +77,39 @@ export default function SocialMediaMarketing() {
           </div>
         </section>
 
+        {/* Platforms We Support */}
         <section className="bg-gray-50 py-20 mt-20 animate-fade-in-up">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl font-bold text-navy mb-2 text-center">Platforms We Master</h2>
+            <h2 className="text-4xl font-bold text-navy mb-2 text-center">Platforms We Support</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-cyan-600 to-blue-900 rounded-full mx-auto mb-12"></div>
 
-            <div className="grid md:grid-cols-5 gap-6">
-              {["Facebook", "Instagram", "LinkedIn", "TikTok", "Twitter/X"].map((platform, i) => (
-                <div
-                  key={i}
-                  className="p-6 bg-white rounded-lg border border-gray-200 text-center hover-lift animate-fade-in-up"
-                  style={{ animationDelay: `${i * 0.1}s` }}
-                >
-                  <p className="font-semibold text-navy">{platform}</p>
-                </div>
-              ))}
+            <div className="grid md:grid-cols-4 gap-6">
+              {["WordPress", "Webflow", "Contentful", "Strapi", "Sanity", "Ghost", "Statamic", "Craft"].map(
+                (platform, i) => (
+                  <div
+                    key={i}
+                    className="p-6 bg-white rounded-lg border border-gray-200 text-center hover-lift animate-fade-in-up"
+                    style={{ animationDelay: `${i * 0.1}s` }}
+                  >
+                    <p className="font-semibold text-navy">{platform}</p>
+                  </div>
+                ),
+              )}
             </div>
           </div>
         </section>
 
+        {/* CTA Section */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center animate-fade-in-up">
-          <h2 className="text-4xl font-bold text-navy mb-6">Ready to Go Viral?</h2>
+          <h2 className="text-4xl font-bold text-navy mb-6">Ready to Implement a CMS?</h2>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Our social media experts will elevate your brand across all platforms
+            Get a powerful content management system that grows with your business
           </p>
           <Link
             href="/contact"
             className="inline-flex items-center gap-2 px-8 py-4 bg-blue-900 text-white rounded-full font-semibold hover:bg-cyan-600 transition-all duration-300 hover:shadow-lg"
           >
-            Start Growing Today
+            Get Started Today
             <ArrowRight size={20} />
           </Link>
         </section>

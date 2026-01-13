@@ -1,42 +1,40 @@
 "use client"
 
-import { Navbar } from "@/components/navbar"
-import { Footer } from "@/components/footer"
-import { ArrowRight, Code2, Smartphone, Zap, Lock } from "lucide-react"
+import { Navbar } from "../../../components/navbar"
+import { Footer } from "../../../components/footer"
+import { ArrowRight, Palette, Eye, Smartphone, Zap } from "lucide-react"
 import Link from "next/link"
 
-export default function WebAppDevelopment() {
+export default function UIUXDesign() {
   return (
     <>
       <Navbar />
       <main className="pt-24 pb-16">
-        {/* Hero Section */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 animate-fade-in-up">
           <div className="mb-12">
             <h1 className="text-5xl md:text-6xl font-bold text-navy mb-4">
-              Web App <span className="text-cyan-600">Development</span>
+              UI/UX <span className="text-cyan-600">Design</span>
             </h1>
-            <p className="text-xl text-gray-600 mb-4">
-              Build scalable, modern web applications with cutting-edge technologies
-            </p>
+            <p className="text-xl text-gray-600 mb-4">Create beautiful, intuitive interfaces that users love</p>
             <div className="w-24 h-1 bg-gradient-to-r from-cyan-600 to-blue-900 rounded-full"></div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-slide-in-left">
-              <h2 className="text-3xl font-bold text-navy mb-6">Professional Web Solutions</h2>
+              <h2 className="text-3xl font-bold text-navy mb-6">Design That Converts</h2>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                We create responsive, fast, and user-friendly web applications using the latest technologies including
-                React, Next.js, Node.js, and more.
+                We create stunning user interfaces and experiences that are not only beautiful but also highly
+                functional and conversion-optimized. Every design decision is backed by user research and best
+                practices.
               </p>
               <ul className="space-y-3 mb-8">
                 {[
-                  "Responsive Design",
-                  "Fast Performance",
-                  "SEO Optimized",
-                  "Secure Architecture",
-                  "Scalable Backend",
-                  "Real-time Updates",
+                  "User Research & Personas",
+                  "Wireframing & Prototyping",
+                  "Visual Design",
+                  "Interaction Design",
+                  "Usability Testing",
+                  "Design Systems",
                 ].map((item, i) => (
                   <li
                     key={i}
@@ -52,16 +50,16 @@ export default function WebAppDevelopment() {
                 href="/contact"
                 className="inline-block px-8 py-3 bg-blue-900 text-white rounded-full font-semibold hover:bg-cyan-600 transition-all duration-300 hover:shadow-lg"
               >
-                Start Your Project
+                Start Design Project
               </Link>
             </div>
 
             <div className="grid grid-cols-2 gap-4 animate-slide-in-right">
               {[
-                { icon: Code2, title: "Modern Stack", desc: "Latest Technologies" },
+                { icon: Palette, title: "Creative Design", desc: "Stunning Visuals" },
+                { icon: Eye, title: "User-Centric", desc: "Research-Based" },
                 { icon: Smartphone, title: "Responsive", desc: "All Devices" },
-                { icon: Zap, title: "Lightning Fast", desc: "Optimized Performance" },
-                { icon: Lock, title: "Secure", desc: "Enterprise Security" },
+                { icon: Zap, title: "Performance", desc: "Fast & Smooth" },
               ].map((item, i) => (
                 <div
                   key={i}
@@ -77,39 +75,38 @@ export default function WebAppDevelopment() {
           </div>
         </section>
 
-        {/* Tech Stack Section */}
         <section className="bg-gray-50 py-20 mt-20 animate-fade-in-up">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl font-bold text-navy mb-2 text-center">Our Tech Stack</h2>
+            <h2 className="text-4xl font-bold text-navy mb-2 text-center">Our Design Process</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-cyan-600 to-blue-900 rounded-full mx-auto mb-12"></div>
 
-            <div className="grid md:grid-cols-4 gap-6">
-              {["React.js", "Next.js", "Node.js", "TypeScript", "PostgreSQL", "MongoDB", "Docker", "AWS"].map(
-                (tech, i) => (
-                  <div
-                    key={i}
-                    className="p-6 bg-white rounded-lg border border-gray-200 text-center hover-lift animate-fade-in-up"
-                    style={{ animationDelay: `${i * 0.1}s` }}
-                  >
-                    <p className="font-semibold text-navy">{tech}</p>
+            <div className="grid md:grid-cols-5 gap-4">
+              {["Discover", "Design", "Prototype", "Test", "Refine"].map((step, i) => (
+                <div
+                  key={i}
+                  className="p-6 bg-white rounded-lg border border-gray-200 text-center hover-lift animate-fade-in-up"
+                  style={{ animationDelay: `${i * 0.15}s` }}
+                >
+                  <div className="w-10 h-10 bg-cyan-600 text-white rounded-full flex items-center justify-center font-bold mx-auto mb-3">
+                    {i + 1}
                   </div>
-                ),
-              )}
+                  <p className="font-semibold text-navy">{step}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center animate-fade-in-up">
-          <h2 className="text-4xl font-bold text-navy mb-6">Ready to Build Your Web App?</h2>
+          <h2 className="text-4xl font-bold text-navy mb-6">Ready for Beautiful Design?</h2>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Let our expert developers create a powerful web application for your business
+            Let our designers create an interface that captivates and converts your users
           </p>
           <Link
             href="/contact"
             className="inline-flex items-center gap-2 px-8 py-4 bg-blue-900 text-white rounded-full font-semibold hover:bg-cyan-600 transition-all duration-300 hover:shadow-lg"
           >
-            Schedule Consultation
+            Schedule Design Consultation
             <ArrowRight size={20} />
           </Link>
         </section>
