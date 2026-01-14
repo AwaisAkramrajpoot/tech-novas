@@ -9,6 +9,9 @@ const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-mono" })
 export const metadata: Metadata = {
   title: "Novaa Tech - Modern Software Solutions",
   description: "Build the future with our innovative software development and custom solutions",
+  icons: {
+    icon: "/NT-icon.png",
+  },
 }
 
 export default function RootLayout({
