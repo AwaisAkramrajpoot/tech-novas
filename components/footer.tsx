@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import { Mail, Linkedin, Twitter, Github } from "lucide-react"
 
@@ -7,17 +8,34 @@ export function Footer() {
   return (
     <footer className="bg-blue-900 text-white border-t border-cyan-500/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-          {/* Company Info */}
-          <div className="animate-fade-in-up">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center font-bold text-white">
-                N
-              </div>
-              <span className="font-bold">Novaa Tech</span>
-            </div>
-            <p className="text-cyan-100 text-sm">Our Tech Solutions Drive Your Success.</p>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8"> 
+
+<Link
+  href="/"
+  className="flex items-center gap-2 group animate-fade-in-down"
+>
+  {/* Logo */}
+  <div
+    className="w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center
+               group-hover:shadow-lg group-hover:shadow-cyan-500/50
+               transition-all duration-300"
+  >
+    <Image
+      src="/NT-icon.png"
+      alt="Novaa Tech Logo"
+      width={32}
+      height={32}
+      className="object-contain"
+      priority
+    />
+  </div>
+
+  {/* Brand Name */}
+  <span className="text-xl font-bold text-white hover:text-cyan-400 transition-colors">
+    Novaa Tech
+  </span>
+</Link>
+
 
           {/* Services */}
           <div className="animate-fade-in-up stagger-1">
